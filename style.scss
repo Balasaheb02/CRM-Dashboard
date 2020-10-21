@@ -80,7 +80,7 @@ li {
 
 /*  global variable */
 
-main-container {
+.main-container {
     display: flex;
     height: 100vh;
 }
@@ -450,11 +450,6 @@ main-container {
     padding-top: 15px;
 }
 
-
-.recent_card > p + p {
-    padding-top: 15px;
-}
-
 .recent_card {
     flex: 20%;
     margin: 10px;
@@ -666,5 +661,3 @@ label {
         display: none;
     }
 }
-
-
