@@ -171,3 +171,89 @@ main-container {
 .menu_item_name + .menu_item_name {
     border-top: 1px solid var(--light);
 }
+
+.button {
+    padding: 5px 30px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15 94 247);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: var(--white);
+}
+
+.create_new_project_button {
+    margin: 14px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.button > p {
+    padding: 15px 20px;
+}
+
+.telegram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.helpdesk > p {
+    color: var(--gray);
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.girl_pic {
+    display: flex;
+    justify-content: center;
+}
+
+.telegram > a {
+    text-decoration: none;
+    color: rgb(15 94 247);
+}
+
+.button > p {
+    padding: 4px 14px;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.outer-circle_1 {
+    background: var(--orange);
+    border-radius: 50%;
+    height: 6px;
+    margin: 5px;
+    width: 6px;
+    position: relative;
+}
+
+.outer-circle_2 {
+    background: var(--blue);
+    border-radius: 50%;
+    height: 6px;
+    margin: 5px;
+    width: 6px;
+    position: relative;
+}
+
+.outer-circle_3 {
+    background: var(--green);
+    border-radius: 50%;
+    height: 6px;
+    margin: 5px;
+    width: 6px;
+    position: relative;
+}
