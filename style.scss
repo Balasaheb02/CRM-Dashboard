@@ -102,3 +102,56 @@ main-container {
     border-bottom: 1px solid var(--light);
 }
 
+.icons {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.menu_items {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar {
+    width: 80%;
+    border: 1px solid var(--light);
+    background-color: rgb(244 247 255);
+}
+
+.dashboard_head {
+    padding: 30px;
+    border-bottom: 1px solid var(--light);
+}
+
+.menu_sidebar {
+    height: calc(100vh - 92px);
+    width: 100%;
+    overflow-y: auto;
+}
+
+.tasks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.pill_button {
+    background-color: rgb(255 184 0);
+    border: none;
+    color: var(--dark);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.link {
+    color: rgb(15 94 247);
+    font-size: 12px;
+}
