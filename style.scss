@@ -450,3 +450,99 @@ main-container {
     padding-top: 15px;
 }
 
+
+.recent_card > p + p {
+    padding-top: 15px;
+}
+
+.recent_card {
+    flex: 20%;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--light);
+    padding: 20px;
+    display: inline;
+}
+
+.project_card {
+    flex: 20%;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--light);
+    display: inline;
+}
+
+.project_card_body {
+    padding: 20px;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    margin: 5px;
+    background-color: var(--red);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.badge_label {
+    font-size: 12px;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firm {
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.badges {
+    display: flex;
+}
+
+.step_1,
+.step_2,
+.step_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.badge_1 {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.badge_2 {
+    background-color: rgb(255 184 0);
+    color: var(--white);
+}
+
+.badge_3 {
+    background-color: rgb(239 55 55);
+    color: var(--white);
+}
+
+.gradient {
+    height: 5px;
+    background: linear-gradient(to right, var(--green) 60%, #ffb800 50%, var(--red) 20%);
+}
+
+.recent_body > span {
+    color: var(--light-text-2);
+}
+
+.cards_group {
+    display: flex;
+}
+
