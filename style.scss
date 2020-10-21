@@ -79,3 +79,26 @@ li {
 }
 
 /*  global variable */
+
+main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar_content {
+    width: 30%;
+    display: flex;
+}
+
+.menu {
+    width: 20%;
+    border: 1px solid var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    border-bottom: 1px solid var(--light);
+}
+
