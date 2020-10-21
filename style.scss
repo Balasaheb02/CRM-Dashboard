@@ -155,3 +155,19 @@ main-container {
     color: rgb(15 94 247);
     font-size: 12px;
 }
+
+.numbers {
+    color: var(--dark);
+}
+
+.menu_item_name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* lobotomized-owl-selector */
+/* You want to set a standard border between your components/modules/anything – mostly vertically – and for this, you set a decent border. After this, you face that your first or last element has unnecessary border and it border; this is solvable with a border on the first or last-child. */
+
+.menu_item_name + .menu_item_name {
+    border-top: 1px solid var(--light);
+}
