@@ -627,3 +627,44 @@ label {
     padding: 0;
 }
 
+.statment {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.user_name {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 90%;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .sidebar_content {
+        width: 10%;
+        min-width: 90px;
+    }
+
+    .menubar {
+        min-height: 92px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .search_bar {
+        display: none;
+    }
+}
+
+
