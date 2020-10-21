@@ -390,3 +390,63 @@ main-container {
     align-items: center;
 }
 
+.task_card {
+    background-color: var(--white);
+    border: 1px solid var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoice_card {
+    background-color: rgb(15 94 247);
+    color: var(--white);
+}
+
+.security_card {
+    background-color: var(--background-1);
+}
+
+.security_top {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light);
+}
+
+.security_body {
+    padding: 40px 5px;
+}
+
+.security_body > p {
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.security_body > p > span {
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.recent_clients_head {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.recent_clients_head > img {
+    padding: 0 10px;
+}
+.recent_cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.recent_card > p + p {
+    padding-top: 15px;
+}
+
