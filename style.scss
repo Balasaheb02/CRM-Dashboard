@@ -314,3 +314,79 @@ main-container {
     text-overflow: ellipsis;
 }
 
+.heading > h4 {
+    padding: 5px;
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user_heading .welcome_back {
+    font-weight: 100;
+    padding-bottom: 10px;
+    font-size: 47px;
+    color: var(--light-text-2);
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.metrics_card,
+.task_card,
+.invoice_card,
+.security_card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    padding: 21px;
+    border-radius: 8px;
+}
+
+.metrics_card {
+    background-color: rgb(255 184 0);
+}
+
+.metrics_card,
+.invoice_card {
+    flex: 16%;
+}
+
+.in_progress {
+    font-size: 12px;
+}
+
+.metric_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.metric_container + .metric_container {
+    border-top: 1px solid var(--white);
+}
+
+.task_card,
+.security_card {
+    flex: 24%;
+}
+
+.metrics_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.metrics_divider {
+    display: flex;
+    align-items: center;
+}
+
