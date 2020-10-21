@@ -546,3 +546,84 @@ main-container {
     display: flex;
 }
 
+.metrics_progress {
+    background-color: var(--orange);
+    margin: 10px;
+}
+
+.task_progress {
+    background-color: var(--blue-text);
+    margin: 10px;
+}
+
+/* search */
+
+form {
+    position: relative;
+    width: 30rem;
+}
+
+.search_icon {
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    right: 0;
+    z-index: 1;
+}
+input {
+    height: var(--height);
+    font-family: var(--font-fam);
+    border: 0;
+    color: var(--color-dark);
+    font-size: 1.4rem;
+}
+input[type="search"] {
+    outline: 0;
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    z-index: 1;
+    position: relative;
+}
+
+input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+}
+label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+/* search   */
+
+.body_content {
+    padding: 20px 40px;
+    height: calc(100vh - 92px);
+    width: 100%;
+    overflow-y: auto;
+}
+
+.crm_name {
+    font-size: 12px;
+    padding: 5px 0 5px;
+    margin: 0;
+}
+
+.task_number {
+    color: rgb(15 94 247);
+    font-size: 16px;
+    padding: 0;
+}
+
+.profile_name {
+    font-size: 16px;
+    padding: 0;
+}
+
