@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div class="create_new_project_button">
-                        <button class="button">
+                        <button onclick="createNewProject()" class="button">
                             <img src="./assets/plus_icon.PNG">
                             <p>Create New Project</p>
                             <img src="./assets/button_dashboard.PNG">
@@ -142,6 +142,29 @@
         </div>
         <div class="main-content">
             <!-- topbar -->
+            <!-- create project form -->
+            <div id="overlay" >
+                <div class="form-container">
+                    <img src="./assets/cancel.svg" width="40" height="40" onclick="off()">
+                    <form action="/action_page.php">
+                      <label for="fname">Project Name</label>
+                      <input type="text" id="fname" name="project name" placeholder="Project Name..">
+                  
+                      <label for="country">Project Type</label>
+                      <select id="country" name="country">
+                        <option value="australia">Softwear development</option>
+                        <option value="canada">Marketing</option>
+                        <option value="usa">Distributor</option>
+                      </select>
+                  
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Submit">
+                    </form>
+                  </div>
+              </div>
+
 
             <div class="menubar">
                 <div class="search_bar">
@@ -372,6 +395,9 @@
             </div>
         </div>
     </div>
+
+    <script src="./script.js"></script>
 </body>
+
 
 </html>

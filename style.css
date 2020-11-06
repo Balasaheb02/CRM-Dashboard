@@ -172,6 +172,62 @@ li {
     border-top: 1px solid var(--light);
 }
 
+/* overlay effect */
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* form */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    border-radius: 5px;
+    
+    height: 100vh;
+    width: 50%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* form */
+
 .button {
     padding: 5px 30px;
     display: flex;
@@ -565,7 +621,7 @@ form {
     right: 0;
     z-index: 1;
 }
-input {
+input[type="search"] {
     height: var(--height);
     font-family: var(--font-fam);
     border: 0;
@@ -587,7 +643,7 @@ input:not(:placeholder-shown) {
     border-radius: var(--rad) 0 0 var(--rad);
     width: calc(100% - var(--btn-width));
 }
-label {
+label[type="search"] {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     padding: 0;
