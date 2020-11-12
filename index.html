@@ -44,52 +44,7 @@
                             <p class="link">show all <span class="numbers">: 142</span></p>
                         </div>
                     </div>
-                    <div class="menu_item_name">
-                        <div class="heading">
-                            <h4> <span class="dot"></span> Make homepage</h4>
-                            <p>Otundo CRM</p>
-                        </div>
-                        <div class="forward_arrow">
-                            <img src="./assets/forward.PNG">
-                        </div>
-                    </div>
-                    <div class="menu_item_name">
-                        <div class="heading">
-                            <h4><span class="dot"></span>Problem with fixed header</h4>
-                            <p>Coca-juice website</p>
-                        </div>
-                        <div class="forward_arrow">
-                            <img src="./assets/forward.PNG">
-                        </div>
-                    </div>
-                    <div class="menu_item_name">
-                        <div class="heading">
-                            <h4>Fix Safari bug with catelogue video app</h4>
-                            <p>Coca-juice website</p>
-                        </div>
-                        <div class="forward_arrow">
-                            <img src="./assets/forward.PNG">
-                        </div>
-                    </div>
-
-                    <div class="menu_item_name">
-                        <div class="heading">
-                            <h4>Create UI Kit for layout</h4>
-                            <p>Otundo CRM</p>
-                        </div>
-                        <div class="forward_arrow">
-                            <img src="./assets/forward.PNG">
-                        </div>
-                    </div>
-
-                    <div class="menu_item_name">
-                        <div class="heading">
-                            <h4>Develop map for site</h4>
-                            <p>Crypto Project</p>
-                        </div>
-                        <div class="forward_arrow">
-                            <img src="./assets/forward.PNG">
-                        </div>
+                    <div class="menu_projects">
                     </div>
                     <div class="create_new_project_button">
                         <button onclick="createNewProject()" class="button">
@@ -145,19 +100,19 @@
             <!-- create project form -->
             <div id="overlay" >
                 <div class="form-container">
-                    <img src="./assets/cancel.svg" width="40" height="40" onclick="off()">
-                    <form action="/action_page.php">
+                    <img src="./assets/cancel.svg" class="cancel" width="40" height="40" id="close">
+                    <form id="project_form">
                       <label for="fname">Project Name</label>
-                      <input type="text" id="fname" name="project name" placeholder="Project Name..">
+                      <input type="text" id="pname" name="project name" placeholder="Project Name..">
                   
                       <label for="country">Project Type</label>
                       <select id="country" name="country">
-                        <option value="australia">Softwear development</option>
-                        <option value="canada">Marketing</option>
-                        <option value="usa">Distributor</option>
+                        <option value="Softwear development">Softwear development</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Distributor">Distributor</option>
                       </select>
                   
-                      <label for="subject">Subject</label>
+                      <label for="subject">Description</label>
                       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                   
                       <input type="submit" value="Submit">
@@ -167,11 +122,10 @@
 
 
             <div class="menubar">
-                <div class="search_bar">
+                <div class="search_bar" id='menu-sidebar'>
                     <form role="search">
-                        <label for="search">Search for stuff</label>
                         <input id="search" type="search" placeholder="Search in CRM..." />
-                        <img class="search_icon" src="./assets/search.PNG" alt="" srcset="">
+                        <img class="search_icon" src="./assets/search.PNG">
                     </form>
                 </div>
                 <div class="profile_menu">
@@ -280,6 +234,7 @@
                     <div class="cards_group">
                         <div class="recent_cards">
                             <div class="recent_card clickable">
+                                
                                 <p class="recent_heading blue_text">
                                     Mathew Versteng
                                 </p>
@@ -315,79 +270,9 @@
                     </div>
                     <div class="current_project_card">
                         <div class="cards_group">
-                            <div class="recent_cards">
-                                <div class="project_card clickable">
-                                    <div class="project_card_body">
-                                        <h4 class="recent_heading blue_text pb-20">
-                                            GMB Vault
-                                        </h4>
-                                        <p class=" gray-text pb-20">Website Development</p>
-                                        <div class="badges">
-                                            <div class="step_1">
-                                                <span class="step badge_1">5</span>
-                                                <p class="badge_label font-weight-500 ">Completed</p>
-                                            </div>
-                                            <div class="step_2">
-                                                <span class="step badge_2">0</span>
-                                                <p class="font-weight-500 badge_label ">In Progress</p>
-                                            </div>
-                                            <div class="step_3">
-                                                <span class="step badge_3">2</span>
-                                                <p class="font-weight-500 badge_label ">To Do</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gradient">
-                                    </div>
-                                </div>
-                                <div class="project_card clickable">
-                                    <div class="project_card_body">
-                                        <h4 class="recent_heading blue_text pb-20">
-                                            GMB Vault
-                                        </h4>
-                                        <p class=" gray-text pb-20">Website Development</p>
-                                        <div class="badges">
-                                            <div class="step_1">
-                                                <span class="step badge_1">5</span>
-                                                <p class="font-weight-500 badge_label ">Completed</p>
-                                            </div>
-                                            <div class="step_2">
-                                                <span class="step badge_2">0</span>
-                                                <p class="font-weight-500 badge_label ">In Progress</p>
-                                            </div>
-                                            <div class="step_3">
-                                                <span class="step badge_3">2</span>
-                                                <p class="font-weight-500 badge_label ">To Do</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gradient">
-                                    </div>
-                                </div>
-                                <div class="project_card clickable">
-                                    <div class="project_card_body">
-                                        <h4 class="recent_heading blue_text pb-20">
-                                            GMB Vault
-                                        </h4>
-                                        <p class=" gray-text pb-20">Website Development</p>
-                                        <div class="badges">
-                                            <div class="step_1">
-                                                <span class="step badge_1">5</span>
-                                                <p class="font-weight-500 badge_label ">Completed</p>
-                                            </div>
-                                            <div class="step_2">
-                                                <span class="step badge_2">0</span>
-                                                <p class="font-weight-500 badge_label ">In Progress</p>
-                                            </div>
-                                            <div class="step_3">
-                                                <span class="step badge_3">2</span>
-                                                <p class="font-weight-500 badge_label ">To Do</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gradient">
-                                    </div>
-                                </div>
+                            <div class="recent_cards" id="project_card_main">
+                               
+                               
                             </div>
                         </div>
                     </div>

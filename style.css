@@ -190,40 +190,48 @@ li {
     cursor: pointer;
 }
 
+.cancel{
+    position: absolute;
+    right: -18px;
+    top: 0;
+}
+
 /* form */
 input[type="text"],
 select,
 textarea {
     width: 100%;
     padding: 12px;
+    min-width: 480px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    resize: vertical;
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
+    background-color: var(--blue);
     color: white;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    min-width: 480px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: var(--blue);
 }
 
 .form-container {
     border-radius: 5px;
-    
     height: 100vh;
     width: 50%;
+    max-width: 600px;
+    min-width: 556px;
     background-color: #f2f2f2;
     padding: 20px;
+    position: relative;
 }
 
 /* form */
@@ -521,6 +529,14 @@ input[type="submit"]:hover {
     border-radius: 8px;
     border: 1px solid var(--light);
     display: inline;
+    position: relative;
+}
+
+.project_card  .trash {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    cursor: pointer;
 }
 
 .project_card_body {
@@ -639,7 +655,7 @@ input[type="search"] {
     position: relative;
 }
 
-input:not(:placeholder-shown) {
+input[type="search"]:not(:placeholder-shown) {
     border-radius: var(--rad) 0 0 var(--rad);
     width: calc(100% - var(--btn-width));
 }
