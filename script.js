@@ -1,12 +1,32 @@
 function createNewProject() {
-  document.getElementById("overlay").style.display = "block";
+  document.getElementById("overlay").style.visibility = "visible";
 }
 
 function close() {
-  document.getElementById("overlay").style.display = "none";
+  document.getElementById("overlay").style.visibility = "hidden";
+  document.getElementById("user").style.visibility = "hidden";
 }
 
-id = 13547;
+function notFound() {
+  document.getElementById("overlay_not_found").style.visibility = "visible";
+  setTimeout(function windowReload() {
+    window.location.reload();;
+  }, 1000);
+}
+
+
+
+
+let id = 13547;
+let user_id = 1234;
+
+class User {
+  constructor(user_name, company_name) {
+    this.user_name = user_name;
+    this.company_name = company_name;
+    this.user_id = user_id;
+  }
+}
 
 //project class: represents a project (project)
 class Project {
@@ -18,6 +38,9 @@ class Project {
   }
 }
 
+// class User {
+
+// }
 
 // card class :handles Ui (ui)
 
@@ -33,7 +56,7 @@ class UI {
   static addProjectToCards(project) {
 
     const listing = document.querySelector('body > div > div.sidebar_content > div.sidebar > div.menu_sidebar > div.menu_projects');
-    const element =document.createElement('div');
+    const element = document.createElement('div');
 
     element.innerHTML = `
     <div class="menu_item_name">
@@ -46,7 +69,7 @@ class UI {
                         </div>
                     </div>
     `
-listing.appendChild(element);
+    listing.appendChild(element);
 
     const cards_main = document.querySelector('body > div > div.main-content > div.body_content > div > div.current_project_card > div > div')
 
@@ -62,7 +85,7 @@ listing.appendChild(element);
         <p class=" gray-text pb-20">${project.country_name}</p>
         <div class="badges">
             <div class="step_1">
-                <span class="step badge_1">5</span>
+                <span class="step badge_1">0</span>
                 <p class="badge_label font-weight-500 ">Completed</p>
             </div>
             <div class="step_2">
@@ -70,7 +93,7 @@ listing.appendChild(element);
                 <p class="font-weight-500 badge_label ">In Progress</p>
             </div>
             <div class="step_3">
-                <span class="step badge_3">2</span>
+                <span class="step badge_3">0</span>
                 <p class="font-weight-500 badge_label ">To Do</p>
             </div>
         </div>
@@ -79,11 +102,11 @@ listing.appendChild(element);
     </div>
 </div>`;
 
-cards_main.appendChild(cards);
+    cards_main.appendChild(cards);
 
   }
 
-static deleteProject(el) {
+  static deleteProject(el) {
     if (el.classList.contains('trash')) {
       el.parentElement.parentElement.remove();
       window.location.reload();
@@ -92,7 +115,7 @@ static deleteProject(el) {
 
 
 
-static clearFields() {
+  static clearFields() {
     document.getElementById('country').value = '';
     document.getElementById('pname').value = '';
     document.getElementById('subject').value = '';
@@ -102,8 +125,11 @@ static clearFields() {
 //store class : handles store
 
 class Store {
+
+  
   static getProjects() {
     let projects;
+
 
     if (localStorage.getItem('projects') === null) {
       projects = [];
@@ -114,9 +140,32 @@ class Store {
     return projects;
   }
 
+  static getUser() {
+    let user_details;
+
+    if (localStorage.getItem('user_details') === null) {
+      user_details = [];
+
+    } else {
+      user_details = JSON.parse(localStorage.getItem('user_details'));
+    }
+    return user_details;
+  }
+
+
+  static addUser(user) {
+    const user_details = Store.getUser();
+    user_details.push(user);
+    console.log(user_details);
+    localStorage.setItem('user_details', JSON.stringify(user_details));
+    console.log(user_details);
+  }
+
   static addProject(project) {
     const projects = Store.getProjects();
+    
     projects.push(project);
+ 
     localStorage.setItem('projects', JSON.stringify(projects));
   }
 
@@ -124,7 +173,7 @@ class Store {
     const projects = Store.getProjects();
 
     projects.forEach((id, index) => {
-      if(id === id) {
+      if (id === id) {
         projects.splice(index, 1);
       }
     });
@@ -134,9 +183,40 @@ class Store {
 }
 
 //event to display project
-document.addEventListener('DOMContentLoaded', UI.displayProjects);
+document.addEventListener('DOMContentLoaded', function user_available() {
+  if(localStorage.getItem('user_details') === null) {
+    document.getElementById("user").style.visibility = "visible";
+  } else {
+    document.getElementById("user").style.visibility = "hidden";
+  }
+} );
 
-//event to add
+//event to add user 
+document.querySelector('#user_form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const user_name = document.getElementById('user-name').value;
+  const company_name = document.getElementById('company-name').value;
+
+  if (user_name === '' || company_name === '') {
+
+    alert('Please fill the required fields')
+  }
+  else {
+    alert('Form is submitted')
+  };
+
+  const user = new User(user_name, company_name, user_id);
+
+  Store.addUser(user);
+
+  close();
+
+  user_id = user_id + 1;
+
+})
+
+//event to add project
 document.querySelector('#project_form').addEventListener('submit', (e) => {
 
   e.preventDefault();
@@ -189,7 +269,7 @@ document.querySelector('#project_card_main').addEventListener('click', (e) => {
 
 document.getElementById("close").addEventListener('click', (e) => {
 
-  document.getElementById("overlay").style.display = "none";
+  document.getElementById("overlay").style.visibility = "hidden";
   e.stopPropagation();
 })
 

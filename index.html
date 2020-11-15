@@ -22,10 +22,10 @@
                 </div>
                 <div class="menu_items">
                     <img class="icons" src="./assets/home.PNG">
-                    <img class="icons" src="./assets/slide.PNG">
-                    <img class="icons" src="./assets/user.PNG">
-                    <img class="icons" src="./assets/dash.PNG">
-                    <img class="icons" src="./assets/help.PNG">
+                    <img class="icons" class="" onclick="notFound()" src="./assets/slide.PNG">
+                    <img class="icons" onclick="notFound()" src="./assets/user.PNG">
+                    <img class="icons" onclick="notFound()" src="./assets/dash.PNG">
+                    <img class="icons" onclick="notFound()" src="./assets/help.PNG">
                 </div>
             </div>
 
@@ -98,27 +98,47 @@
         <div class="main-content">
             <!-- topbar -->
             <!-- create project form -->
-            <div id="overlay" >
+            <div class="overlay" id="overlay">
                 <div class="form-container">
                     <img src="./assets/cancel.svg" class="cancel" width="40" height="40" id="close">
-                    <form id="project_form">
-                      <label for="fname">Project Name</label>
-                      <input type="text" id="pname" name="project name" placeholder="Project Name..">
-                  
-                      <label for="country">Project Type</label>
-                      <select id="country" name="country">
-                        <option value="Softwear development">Softwear development</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Distributor">Distributor</option>
-                      </select>
-                  
-                      <label for="subject">Description</label>
-                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                  
-                      <input type="submit" value="Submit">
+                    <form id="project_form" class="project_form">
+                        <label for="fname">Project Name</label>
+                        <input type="text" id="pname" name="project name" placeholder="Project Name..">
+
+                        <label for="country">Project Type</label>
+                        <select id="country" name="country">
+                            <option value="Software development">Software development</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Distributor">Distributor</option>
+                        </select>
+
+                        <label for="subject">Description</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
                     </form>
-                  </div>
-              </div>
+                </div>
+            </div>
+
+            <div class="user-overlay" id="user">
+                <div class="user-container">
+                    <img src="./assets/cancel.svg" class="cancel" width="40" height="40" id="close">
+                    <form id="user_form">
+                        <label for="user-name">User Name</label>
+                        <input type="text" id="user-name" name="user-name" placeholder="User Name">
+
+                        <label for="company-name">Company Name</label>
+                        <input type="text" id="company-name" name="company-name" placeholder="Company Name">
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="overlay_not_found" id="overlay_not_found">
+                <div class="text">Work is in progress</div>
+            </div>
 
 
             <div class="menubar">
@@ -142,7 +162,7 @@
                         <img src="./assets/profile.PNG">
                         <div class="statment">
                             <p class="crm_name gray-text">User</p>
-                            <p class="profile_name">Kolin F.</p>
+                            <p class="profile_name" id="user_name"></p>
                         </div>
                         <img class="clickable" src="./assets/down.PNG">
                     </div>
@@ -151,7 +171,7 @@
             <div class="body_content">
                 <div>
                     <div class="user_heading">
-                        <p class="welcome_back"> Welcome back, <span class="user_name"> Kolin F.</span></p>
+                        <p class="welcome_back" > Welcome back, <span class="user_name" id="user_name" > Kolin F.</span></p>
                     </div>
 
                     <div class="cards">
@@ -216,10 +236,9 @@
                                 <h3>Security</h3>
                                 <img src="./assets/shield.PNG">
                             </div>
-                            <div class="light_text_2 security_body">
-                                <p>Last Login: <span> 5 July 2020</span> at 4:07AM</p>
+                            <div class="light_text_2 security_body" id="security">
                                 <p>IP: <span>212.19.20.173</span></p>
-                                <p>Mozilla/5.0 (Macintosh Intel Mac OS X)</p>
+                               
                             </div>
                             <div class="blue_text">
                                 <p>History of login</p>
@@ -234,7 +253,7 @@
                     <div class="cards_group">
                         <div class="recent_cards">
                             <div class="recent_card clickable">
-                                
+
                                 <p class="recent_heading blue_text">
                                     Mathew Versteng
                                 </p>
@@ -271,8 +290,8 @@
                     <div class="current_project_card">
                         <div class="cards_group">
                             <div class="recent_cards" id="project_card_main">
-                               
-                               
+
+
                             </div>
                         </div>
                     </div>
