@@ -38,9 +38,50 @@ class Project {
   }
 }
 
-// class User {
+let date_generate = class {
+  constructor(year, month, current_date, hours, minute) {
+    const date = new Date();
+    this.year = date.getFullYear();
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    this.month = months[date.getMonth()];
+    this.current_date = date.getDate();
+    this.hours = date.getHours();
+    this.minute = date.getMinutes();
+  }
+}
 
-// }
+
+class Recent_card {
+
+  static recent(user_details, date_generate) {
+    
+  console.log(date_generate);
+
+
+    const recent = document.createElement('div');
+
+
+    const recent_element = document.getElementById('recent_cards');
+
+
+    recent.innerHTML = `
+<div class="recent_card clickable">
+<p class="recent_heading blue_text">
+    ${user_details.user_name}
+</p>
+<p class="recent_body light_text_2 firm">${user_details.user_company}</p>
+<p class="recent_body "> <b>${date_generate.current_date} ${date_generate.month} ${date_generate.year}</b> <span>at ${date_generate.hours}:${date_generate.minute} AM</span></p>
+</div>
+`
+
+recent_element.appendChild(recent);
+
+  }
+
+  
+
+}
+
 
 // card class :handles Ui (ui)
 
@@ -126,7 +167,7 @@ class UI {
 
 class Store {
 
-  
+
   static getProjects() {
     let projects;
 
@@ -163,9 +204,9 @@ class Store {
 
   static addProject(project) {
     const projects = Store.getProjects();
-    
+
     projects.push(project);
- 
+
     localStorage.setItem('projects', JSON.stringify(projects));
   }
 
@@ -184,12 +225,12 @@ class Store {
 
 //event to display project
 document.addEventListener('DOMContentLoaded', function user_available() {
-  if(localStorage.getItem('user_details') === null) {
+  if (localStorage.getItem('user_details') === null) {
     document.getElementById("user").style.visibility = "visible";
   } else {
     document.getElementById("user").style.visibility = "hidden";
   }
-} );
+});
 
 //event to add user 
 document.querySelector('#user_form').addEventListener('submit', (e) => {
@@ -212,7 +253,13 @@ document.querySelector('#user_form').addEventListener('submit', (e) => {
 
   close();
 
+  const date = new Date();
+
+  Recent_card.recent(date);
+
   user_id = user_id + 1;
+
+ 
 
 })
 
